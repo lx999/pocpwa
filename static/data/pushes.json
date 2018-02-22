@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "active": false,
+      "type": "INFO",
+      "title": "Start demo",
+      "message": "Starting demo..."
+    }
+   ]
+}

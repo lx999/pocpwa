@@ -1,0 +1,37 @@
+{
+	"classements":	[
+		{
+			"rang": "1",
+			"club": "amiens",
+			"logo": "amiens.png",
+			"pt": "4",
+			"J": "1",
+			"G": "1",
+			"N": "1",
+			"P": "1",
+			"somme": "4"
+		},
+		{
+			"rang": "2",
+			"club": "angers",
+			"logo": "angers.png",
+			"pt": "3",
+			"J": "1",
+			"G": "0",
+			"N": "1",
+			"P": "0",
+			"somme": "2"
+		},
+		{
+			"rang": "3",
+			"club": "bordeaux",
+			"logo": "bordeaux.png",
+			"pt": "2",
+			"J": "1",
+			"G": "0",
+			"N": "0",
+			"P": "0",
+			"somme": "1"
+		}
+	]
+}

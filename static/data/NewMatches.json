@@ -1,0 +1,97 @@
+{
+  "miseAjour": "10H00",
+  "matches": [
+    {
+      "id": "1",
+      "ligue": "1",
+      "temp": "46",
+      "statut": "L",
+      "heure": "17H00",
+      "recevant": {
+        "club": "Bourg en B",
+        "logo": "losc.png",
+        "classement": "10",
+        "score" : "3",
+        "nbRed": "1",
+        "nbYellow": "2"
+      },
+      "visiteur": {
+        "club": "psg",
+        "logo": "psg.png",
+        "classement": "10",
+        "score" : "0",
+        "nbRed": "1",
+        "nbYellow": "2"
+      }
+    },
+    {
+      "id": "2",
+      "ligue": "2",
+      "temp": "MT",
+      "statut": "L",
+      "heure": "17H00",
+      "recevant": {
+        "club": "Bourg en B",
+        "logo": "amiens.png",
+        "classement": "10",
+        "score" : "1",
+        "nbRed": "1",
+        "nbYellow": "2"
+      },
+      "visiteur": {
+        "club": "Châteauroux",
+        "logo": "angers.png",
+        "classement": "10",
+        "score" : "1",
+        "nbRed": "1",
+        "nbYellow": "2"
+      }
+    },
+    {
+      "id": "3",
+      "ligue": "2",
+      "temp": "90",
+      "statut": "J",
+      "heure": "17H00",
+      "recevant": {
+        "club": "Bourg en B",
+        "logo": "bordeaux.png",
+        "classement": "10",
+        "score" : "0",
+        "nbRed": "1",
+        "nbYellow": "2"
+      },
+      "visiteur": {
+        "club": "Châteauroux",
+        "logo": "tfc.png",
+        "classement": "10",
+        "score" : "0",
+        "nbRed": "1",
+        "nbYellow": "2"
+      }
+    },
+    {
+      "id": "4",
+      "ligue": "2",
+      "temp": "0",
+      "statut": "P",
+      "heure": "17H00",
+      "recevant": {
+        "club": "bordeaux",
+        "logo": "bordeaux.png",
+        "classement": "10",
+        "score" : "0",
+        "nbRed": "1",
+        "nbYellow": "2"
+      },
+      "visiteur": {
+        "club": "tfc",
+        "logo": "tfc.png",
+        "classement": "10",
+        "score" : "0",
+        "nbRed": "1",
+        "nbYellow": "2"
+      }
+    }
+  ]
+}

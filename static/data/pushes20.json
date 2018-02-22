@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "active": false,
+      "type": "INFO",
+      "title": "Start demo",
+      "message": "Starting demo..."
+    },
+    {
+      "id": 2,
+      "active": true,
+      "type": "JAUNE",
+      "title": "Avertissement",
+      "message": "Carton jaune pour Cavani - PSG"
+    }
+   ]
+}

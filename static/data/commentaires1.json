@@ -1,0 +1,52 @@
+{
+	"commentaires": [
+		{
+			"minute": "15",
+			"type": "",
+			"text": "La Juventus est invaincue à domicile sur la scène européenne depuis 26 matches (16 succès, 10 nuls). Sa dernière défaite remonte au 10 avril 2013, contre le Bayern Munich (0-2), en quarts de finale de la Ligue des champions.",
+			"affichage": {
+				"gras":"false"
+			}
+		},
+		{
+			"minute": "15",
+			"type": "",
+			"text": "La Juventus est invaincue à domicile sur la scène européenne depuis 26 matches (16 succès, 10 nuls). Sa dernière défaite remonte au 10 avril 2013, contre le Bayern Munich (0-2), en quarts de finale de la Ligue des champions.",
+			"affichage": {
+				"gras":"false"
+			}
+		},
+		{
+			"minute": "10",
+			"type": "rouge",
+			"text": "rouge!",
+			"affichage": {
+				"gras":"true"
+			}
+		},
+		{
+			"minute": "8",
+			"type": "but",
+			"text": "marqué un but",
+			"affichage": {
+				"gras":"true"
+			}
+		},
+		{
+			"minute": "7",
+			"type": "jaune",
+			"text": "yellow",
+			"affichage": {
+				"gras":"true"
+			}
+		},
+		{
+			"minute": "3",
+			"type": "change",
+			"text": "change",
+			"affichage": {
+				"gras":"true"
+			}
+		}
+	]
+}

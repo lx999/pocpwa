@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "active": true,
+      "type": "BUT",
+      "title": "But !",
+      "message": "But de Neymar - PSG"
+    },
+    {
+      "active": false,
+      "type": "CARTON",
+      "title": "Avertissement",
+      "message": "Carton jaune pour Cavani - PSG"
+    },
+    {
+      "active": false,
+      "type": "CARTON",
+      "title": "Expulsion !",
+      "message": "Carton rouge pour Cavani - PSG"
+    },
+    {
+      "active": false,
+      "type": "BUT",
+      "title": "But !",
+      "message": "But de De Preville - LOSC"
+    },
+   ]
+}

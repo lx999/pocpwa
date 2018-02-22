@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "active": false,
+      "type": "INFO",
+      "title": "Start demo",
+      "message": "Starting demo..."
+    },
+    {
+      "id": 2,
+      "active": false,
+      "type": "JAUNE",
+      "title": "Avertissement",
+      "message": "Carton jaune pour Cavani - PSG"
+    },
+    {
+      "id": 3,
+      "active": false,
+      "type": "BUT",
+      "title": "But !",
+      "message": "But de Neymar - PSG"
+    },
+    {
+      "id": 4,
+      "active": true,
+      "type": "INFO",
+      "title": "Fin de match",
+      "message": "LORIENT 1 - 2 LENS"
+    },
+    {
+      "id": 5,
+      "active": true,
+      "type": "ROUGE",
+      "title": "Expulsion !",
+      "message": "Carton rouge pour Cavani - PSG"
+    },
+    {
+      "id": 6,
+      "active": false,
+      "type": "BUT",
+      "title": "But !",
+      "message": "But de De Preville - LOSC"
+    }
+   ]
+}
