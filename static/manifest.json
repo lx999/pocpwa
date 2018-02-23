@@ -3,13 +3,8 @@
   "short_name": "lfp pwa",
   "icons": [
     {
-      "src": "/static/img/icons/android-chrome-200x200_LFP.png",
+      "src": "/pocpwa/static/img/icons/android-chrome-200x200_LFP.png",
       "sizes": "200x200",
-      "type": "image/png"
-    },
-    {
-      "src": "/static/img/icons/android-chrome-512x512.png",
-      "sizes": "512x512",
       "type": "image/png"
     }
   ],
