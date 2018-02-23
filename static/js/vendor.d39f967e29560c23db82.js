@@ -46758,7 +46758,7 @@ var index = {
       (
         process.server ||
         process.SERVER_BUILD ||
-        (Object({"NODE_ENV":"production","MATCHS_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/NewMatches.json","CLASSEMENT_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/classements.json"}) && Object({"NODE_ENV":"production","MATCHS_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/NewMatches.json","CLASSEMENT_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/classements.json"}).VUE_ENV === 'server')
+        (Object({"NODE_ENV":"production","MATCHS_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/NewMatches.php","CLASSEMENT_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/classements.php"}) && Object({"NODE_ENV":"production","MATCHS_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/NewMatches.php","CLASSEMENT_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/classements.php"}).VUE_ENV === 'server')
       )
     ) {
       return
@@ -66663,4 +66663,4 @@ function applyToTag (styleElement, obj) {
 
 /***/ })
 ]);
-//# sourceMappingURL=vendor.38f8922f20a025e66451.js.map
+//# sourceMappingURL=vendor.d39f967e29560c23db82.js.map
