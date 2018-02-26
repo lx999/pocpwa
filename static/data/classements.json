@@ -1,37 +1,373 @@
 {
-	"classements":	[
-		{
-			"rang": "1",
-			"club": "amiens",
-			"logo": "amiens.png",
-			"pt": "4",
-			"J": "1",
-			"G": "1",
-			"N": "1",
-			"P": "1",
-			"somme": "4"
-		},
-		{
-			"rang": "2",
-			"club": "angers",
-			"logo": "angers.png",
-			"pt": "3",
-			"J": "1",
-			"G": "0",
-			"N": "1",
-			"P": "0",
-			"somme": "2"
-		},
-		{
-			"rang": "3",
-			"club": "bordeaux",
-			"logo": "bordeaux.png",
-			"pt": "2",
-			"J": "1",
-			"G": "0",
-			"N": "0",
-			"P": "0",
-			"somme": "1"
-		}
-	]
+	"updated": "2018-02-26 14:57:42",
+	"ligue1": {
+		"live": "0",
+		"classement": [
+			{
+				"position": "1",
+				"id": "35",
+				"club": "Paris Saint-Germain",
+				"slug": "paris-saint-germain",
+				"points": "56",
+				"joues": "22",
+				"diff": "+51"
+			},
+			{
+				"position": "2",
+				"id": "67",
+				"club": "Olympique Lyonnais",
+				"slug": "olympique-lyonnais",
+				"points": "48",
+				"joues": "22",
+				"diff": "+29"
+			},
+			{
+				"position": "3",
+				"id": "1",
+				"club": "Olympique de Marseille",
+				"slug": "olympique-de-marseille",
+				"points": "47",
+				"joues": "22",
+				"diff": "+23"
+			},
+			{
+				"position": "4",
+				"id": "305",
+				"club": "AS Monaco",
+				"slug": "as-monaco",
+				"points": "46",
+				"joues": "22",
+				"diff": "+29"
+			},
+			{
+				"position": "5",
+				"id": "24",
+				"club": "FC Nantes",
+				"slug": "fc-nantes",
+				"points": "34",
+				"joues": "22",
+				"diff": "-2"
+			},
+			{
+				"position": "6",
+				"id": "224",
+				"club": "OGC Nice",
+				"slug": "ogc-nice",
+				"points": "34",
+				"joues": "22",
+				"diff": "-3"
+			},
+			{
+				"position": "7",
+				"id": "2",
+				"club": "Montpellier Hérault SC",
+				"slug": "montpellier-herault-sc",
+				"points": "31",
+				"joues": "22",
+				"diff": "+5"
+			},
+			{
+				"position": "8",
+				"id": "46",
+				"club": "Stade Rennais FC",
+				"slug": "stade-rennais-fc",
+				"points": "31",
+				"joues": "22",
+				"diff": "-3"
+			},
+			{
+				"position": "9",
+				"id": "157",
+				"club": "EA Guingamp",
+				"slug": "ea-guingamp",
+				"points": "29",
+				"joues": "22",
+				"diff": "-5"
+			},
+			{
+				"position": "10",
+				"id": "57",
+				"club": "RC Strasbourg Alsace",
+				"slug": "rc-strasbourg-alsace",
+				"points": "27",
+				"joues": "22",
+				"diff": "-10"
+			},
+			{
+				"position": "11",
+				"id": "113",
+				"club": "SM Caen",
+				"slug": "sm-caen",
+				"points": "27",
+				"joues": "22",
+				"diff": "-10"
+			},
+			{
+				"position": "12",
+				"id": "250",
+				"club": "Girondins de Bordeaux",
+				"slug": "girondins-de-bordeaux",
+				"points": "26",
+				"joues": "22",
+				"diff": "-7"
+			},
+			{
+				"position": "13",
+				"id": "90",
+				"club": "Amiens SC",
+				"slug": "amiens-sc",
+				"points": "25",
+				"joues": "22",
+				"diff": "-4"
+			},
+			{
+				"position": "14",
+				"id": "288",
+				"club": "Dijon FCO",
+				"slug": "dijon-fco",
+				"points": "25",
+				"joues": "22",
+				"diff": "-14"
+			},
+			{
+				"position": "15",
+				"id": "243",
+				"club": "ESTAC Troyes",
+				"slug": "estac-troyes",
+				"points": "24",
+				"joues": "22",
+				"diff": "-9"
+			},
+			{
+				"position": "16",
+				"id": "235",
+				"club": "AS Saint-Etienne",
+				"slug": "as-saint-etienne",
+				"points": "23",
+				"joues": "22",
+				"diff": "-17"
+			},
+			{
+				"position": "17",
+				"id": "247",
+				"club": "Angers SCO",
+				"slug": "angers-sco",
+				"points": "22",
+				"joues": "22",
+				"diff": "-7"
+			},
+			{
+				"position": "18",
+				"id": "66",
+				"club": "LOSC",
+				"slug": "losc",
+				"points": "22",
+				"joues": "22",
+				"diff": "-14"
+			},
+			{
+				"position": "19",
+				"id": "68",
+				"club": "Toulouse FC",
+				"slug": "toulouse-fc",
+				"points": "20",
+				"joues": "22",
+				"diff": "-12"
+			},
+			{
+				"position": "20",
+				"id": "294",
+				"club": "FC Metz",
+				"slug": "fc-metz",
+				"points": "15",
+				"joues": "22",
+				"diff": "-20"
+			}
+		]
+	},
+	"ligue2": {
+		"live": "1",
+		"classement": [
+			{
+				"position": "1",
+				"id": "252",
+				"club": "Stade de Reims",
+				"slug": "stade-de-reims",
+				"points": "53",
+				"joues": "22",
+				"diff": "+29"
+			},
+			{
+				"position": "2",
+				"id": "190",
+				"club": "Nîmes Olympique",
+				"slug": "nimes-olympique",
+				"points": "43",
+				"joues": "22",
+				"diff": "+24"
+			},
+			{
+				"position": "3",
+				"id": "306",
+				"club": "Paris FC",
+				"slug": "paris-fc",
+				"points": "41",
+				"joues": "22",
+				"diff": "+9"
+			},
+			{
+				"position": "4",
+				"id": "79",
+				"club": "AC Ajaccio",
+				"slug": "ac-ajaccio",
+				"points": "38",
+				"joues": "22",
+				"diff": "+12"
+			},
+			{
+				"position": "5",
+				"id": "261",
+				"club": "Havre AC",
+				"slug": "havre-ac",
+				"points": "37",
+				"joues": "22",
+				"diff": "+12"
+			},
+			{
+				"position": "6",
+				"id": "283",
+				"club": "FC Lorient",
+				"slug": "fc-lorient",
+				"points": "37",
+				"joues": "22",
+				"diff": "+11"
+			},
+			{
+				"position": "7",
+				"id": "255",
+				"club": "Stade Brestois 29",
+				"slug": "stade-brestois-29",
+				"points": "36",
+				"joues": "22",
+				"diff": "+6"
+			},
+			{
+				"position": "8",
+				"id": "251",
+				"club": "Clermont Foot",
+				"slug": "clermont-foot",
+				"points": "34",
+				"joues": "22",
+				"diff": "+9"
+			},
+			{
+				"position": "9",
+				"id": "135",
+				"club": "Châteauroux",
+				"slug": "chateauroux",
+				"points": "34",
+				"joues": "22",
+				"diff": "-2"
+			},
+			{
+				"position": "10",
+				"id": "69",
+				"club": "FC Sochaux-Montbéliard",
+				"slug": "fc-sochaux-montbeliard",
+				"points": "33",
+				"joues": "21",
+				"diff": "-4"
+			},
+			{
+				"position": "11",
+				"id": "291",
+				"club": "Gazélec FC Ajaccio",
+				"slug": "gazelec-fc-ajaccio",
+				"points": "30",
+				"joues": "22",
+				"diff": "-9"
+			},
+			{
+				"position": "12",
+				"id": "112",
+				"club": "AJ Auxerre",
+				"slug": "aj-auxerre",
+				"points": "26",
+				"joues": "22",
+				"diff": "-5"
+			},
+			{
+				"position": "13",
+				"id": "201",
+				"club": "Chamois Niortais",
+				"slug": "chamois-niortais",
+				"points": "26",
+				"joues": "22",
+				"diff": "-7"
+			},
+			{
+				"position": "14",
+				"id": "281",
+				"club": "Valenciennes FC",
+				"slug": "valenciennes-fc",
+				"points": "26",
+				"joues": "22",
+				"diff": "-9"
+			},
+			{
+				"position": "15",
+				"id": "272",
+				"club": "RC Lens",
+				"slug": "rc-lens",
+				"points": "25",
+				"joues": "21",
+				"diff": "+5"
+			},
+			{
+				"position": "16",
+				"id": "270",
+				"club": "US Orléans",
+				"slug": "us-orleans",
+				"points": "24",
+				"joues": "22",
+				"diff": "-6"
+			},
+			{
+				"position": "17",
+				"id": "13",
+				"club": "AS Nancy Lorraine",
+				"slug": "as-nancy-lorraine",
+				"points": "21",
+				"joues": "22",
+				"diff": "-8"
+			},
+			{
+				"position": "18",
+				"id": "142",
+				"club": "Quevilly Rouen Métropole",
+				"slug": "quevilly-rouen-metropole",
+				"points": "18",
+				"joues": "22",
+				"diff": "-15"
+			},
+			{
+				"position": "19",
+				"id": "107",
+				"club": "FBBP 01",
+				"slug": "fbbp-01",
+				"points": "17",
+				"joues": "22",
+				"diff": "-23"
+			},
+			{
+				"position": "20",
+				"id": "77",
+				"club": "Tours FC",
+				"slug": "tours-fc",
+				"points": "9",
+				"joues": "22",
+				"diff": "-29"
+			}
+		]
+	}
 }
