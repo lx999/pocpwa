@@ -27,31 +27,6 @@
       }
     },
     {
-      "id": "83577",
-      "statut": "J",
-      "ligue": "2",
-      "periode": "",
-      "time": "",
-      "recevant": {
-        "id": "13",
-        "club": "AS Nancy Lorraine",
-        "slug": "as-nancy-lorraine",
-        "classement": "17",
-        "score": "3",
-        "nbRed": "2",
-        "nbYellow": "1"
-      },
-      "visiteur": {
-        "id": "283",
-        "club": "FC Lorient",
-        "slug": "fc-lorient",
-        "classement": "10",
-        "score": "2",
-        "nbRed": "1",
-        "nbYellow": "1"
-      }
-    },
-    {
       "id": "83578",
       "statut": "L",
       "ligue": "2",
