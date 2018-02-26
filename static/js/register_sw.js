@@ -3,6 +3,7 @@ if ('serviceWorker' in navigator) {
     .then(reg => {
       // registration worked
       console.log('[Service Worker] Registration succeeded. Scope is ' + reg.scope);
+      subscribeUser(reg);
       if ('Notification' in window) {
         console.log('Notification permission default status:', Notification.permission);
         Notification.requestPermission(function (status) {

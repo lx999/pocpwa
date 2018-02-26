@@ -1,11 +1,11 @@
 import * as webpush from 'web-push';
 const vapidKeys = {
   publicKey: 'BPkIUOIylNfWjC9MQ3_8oVx0MsaryiEaak1WyYWyqWp1-FuyQitttiMkdjvACkoEds94crwhyRIyVTyc2tVYICI',
-  privateKey: '5ZwdOLmdJEmdsYcp-ERUtmMg328EKq7jMGSAn3nSBgM'
+  privateKey: 'StnpgzEGF2q5Et03uoeouNrLfZG0V_9wgHaDedMI2EU'
 };
 const webPush = webpush;
 webPush.setVapidDetails(
-  'mailto:denhuang@gmail.com',
+  'mailto:xiang.2.li@aw.atos.net',
   vapidKeys.publicKey,
   vapidKeys.privateKey
 );
