@@ -5,7 +5,7 @@ const vapidKeys = {
 };
 const webPush = webpush;
 webPush.setVapidDetails(
-  'mailto:xiang.2.li@aw.atos.net',
+  'mailto:weizibo295@gmail.com',
   vapidKeys.publicKey,
   vapidKeys.privateKey
 );
@@ -14,15 +14,14 @@ const options = {
   body: 'Angular 測試工作坊 9月23日(六)',
   data: {
           link: 'https://forum.angular.tw/'
-        },
-  requireInteraction: true
+        }
 };
 const subscription = {
-  endpoint: 'https://fcm.googleapis.com/fcm/send/daSHTr1i3-s:APA91bG-kL83_kmJGddVlOrYpav7EFKd0hfMih-OvX_gGsYRUAMxeuIkL0lFjM7ty0MseUrHRyys-OXGZyRo4vhIInVn08TIsfwKf0n3itdX0gMyPWu27tte6gl0vQeMAnQ9-heuylZZ',
+  endpoint: 'https://fcm.googleapis.com/fcm/send/ejQdiVRbX5o:APA91bEWmjLsuGmbLTyhR9-L7oOBvtF_ZpId764RYpwLp8I-m2vT295zO7r9rSQ5CwDGfeVsGIv_uv6IYH-tcdvEfHJFszlYQHnnf5ezhvQoJj24V52hxZ-oavHWHp6vcq5gyGCXnXBg',
   expirationTime: null,
   keys: {
-    p256dh: 'BOcDjl4aGtSthyvkYByAhHI8Agt6SFTAHiWW93p_XlT4z1EADsa80_bbyQffx30ezjuO6hz4pQc8yOK04ZyXhX4=',
-    auth: 'QA8fMBVVis1que_OHOxuOg=='
+    p256dh: 'BIRqOaHIf8DT2iEfta3yQqdFN1kNoIJ1G-k_wmLNSU5iCSbO8-sw786cYbbRW5R9krmF0w_93l68OgbZ5_6n_Uk=',
+    auth: 'Ekxm90zzy0NvjNO7LfvmKA=='
   }
 };
 webPush.sendNotification(subscription, JSON.stringify(options));

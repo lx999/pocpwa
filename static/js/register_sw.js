@@ -8,29 +8,12 @@ if ('serviceWorker' in navigator) {
         console.log('Notification permission default status:', Notification.permission);
         Notification.requestPermission(function (status) {
           console.log('Notification permission status:', status);
-          // displayNotification();
         });
       }
     }).catch(error => {
       // registration failed
       console.log('[Service Worker] Registration failed with ' + error);
     });
-}
-
-function displayNotification() {
-  if (Notification.permission == 'granted') {
-    navigator.serviceWorker.getRegistration().then(reg => {
-      var options = {
-        icon: '/pocpwa/static/img/icons/android-chrome-200x200_LFP.png',
-        body: '歡迎加入 Angular 社群',
-        data: {
-          link: 'https://forum.angular.tw/'
-        }
-      };
-      reg.showNotification('Angular User Group Taiwan', options);
-      console.log('displayNotification');
-    });
-  }
 }
 
 const applicationServerPublicKey = `BKsb5IumFOgJMBgk15Ce-oU123T5EuPFo3goBbRhwZarYlUfGC-I7JTKSee2TpmjG3HNZQcwirLYz2Fx9b_eZrU`;
