@@ -16,8 +16,10 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+// web-push generate-vapid-keys pour générer la clé publique et privée
 const applicationServerPublicKey = `BKsb5IumFOgJMBgk15Ce-oU123T5EuPFo3goBbRhwZarYlUfGC-I7JTKSee2TpmjG3HNZQcwirLYz2Fx9b_eZrU`;
 
+// changer de format
 function urlB64ToUint8Array(base64String) {
   const padding = '='.repeat((4 - base64String.length % 4) % 4);
   const base64 = (base64String + padding)
