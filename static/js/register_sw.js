@@ -17,6 +17,8 @@ if ('serviceWorker' in navigator) {
 }
 
 // web-push generate-vapid-keys pour générer la clé publique et privée
+// la publique est pour générer la subscription
+// la privée est pour exécuter push
 const applicationServerPublicKey = `BKsb5IumFOgJMBgk15Ce-oU123T5EuPFo3goBbRhwZarYlUfGC-I7JTKSee2TpmjG3HNZQcwirLYz2Fx9b_eZrU`;
 
 // changer de format
@@ -35,6 +37,7 @@ function urlB64ToUint8Array(base64String) {
   return outputArray;
 }
 
+// subscribe à l'aide de pushManager
 function subscribeUser(swRegistration) {
   const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
   swRegistration.pushManager.subscribe({
