@@ -1,19 +1,28 @@
+var config = {
+  apiKey: "AIzaSyBDB7tizfKHj52jIeoJssDGLsFFuT0ZNNk",
+  authDomain: "lfp-poc.firebaseapp.com",
+  databaseURL: "https://lfp-poc.firebaseio.com",
+  projectId: "lfp-poc",
+  storageBucket: "",
+  messagingSenderId: "186100568524"
+};
+firebase.initializeApp(config);
+
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('static/js/sw.js')
-    .then(reg => {
-      // registration worked
-      console.log('[Service Worker] Registration succeeded. Scope is ' + reg.scope);
-      subscribeUser(reg);
-      if ('Notification' in window) {
-        console.log('Notification permission default status:', Notification.permission);
-        Notification.requestPermission(function (status) {
-          console.log('Notification permission status:', status);
-        });
-      }
-    }).catch(error => {
-      // registration failed
-      console.log('[Service Worker] Registration failed with ' + error);
+  return navigator.serviceWorker.ready;
+    .then(function(registration) {
+      registration.pushManager.subscribe({userVisibleOnly: true}).then(function(sub) {
+        var endpointSections = sub.endpoint.split('/');
+        var subscriptionId = endpointSections[endpointSections.length - 1];
+        var newKey = firebase.database().ref().child('token').push().key;
+        firebase.database().ref('token/' + newKey).set({subscriptionId: subscriptionId});
+        console.log('endpoint:', subscriptionId);
+      });
     });
+  navigator.serviceWorker.ready.then(function(registration) {
+     console.log('Service Worker Ready');
+  });
 }
 
 // web-push generate-vapid-keys pour générer la clé publique et privée

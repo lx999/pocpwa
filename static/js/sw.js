@@ -1,3 +1,12 @@
+self.addEventListener('install', function(event) {
+  self.skipWaiting();
+  console.log('Installed', event);
+});
+
+self.addEventListener('activate', function(event) {
+  console.log('Activated', event);
+});
+
 self.addEventListener('notificationclick', event => {
   const notification = event.notification;
   const action = event.action;
