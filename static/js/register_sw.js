@@ -1,16 +1,5 @@
-var config = {
-  apiKey: "AIzaSyBDB7tizfKHj52jIeoJssDGLsFFuT0ZNNk",
-  authDomain: "lfp-poc.firebaseapp.com",
-  databaseURL: "https://lfp-poc.firebaseio.com",
-  projectId: "lfp-poc",
-  storageBucket: "",
-  messagingSenderId: "186100568524"
-};
-firebase.initializeApp(config);
-
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('static/js/sw.js')
-  return navigator.serviceWorker.ready;
     .then(function(registration) {
       registration.pushManager.subscribe({userVisibleOnly: true}).then(function(sub) {
         var endpointSections = sub.endpoint.split('/');
