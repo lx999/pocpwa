@@ -106,15 +106,27 @@
   "notifications": [
     {
       "id": "1",
-      "type": "but",
+      "type": "BUT",
       "title": "but",
       "message": "cool!"
     },
     {
       "id": "2",
-      "type": "pen",
-      "title": "Pen", 
+      "type": "ROUGE",
+      "title": "ROUGE", 
       "message": "pppp"
+    },
+    {
+      "id": "3",
+      "type": "JAUNE",
+      "title": "JAUNE", 
+      "message": "pppp"
+    },
+    {
+      "id": "3",
+      "type": "ROUGE",
+      "title": "ROUGE", 
+      "message": "222"
     }
   ]
 }
