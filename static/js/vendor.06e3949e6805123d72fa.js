@@ -46758,7 +46758,7 @@ var index = {
       (
         process.server ||
         process.SERVER_BUILD ||
-        (Object({"NODE_ENV":"production","MATCHS_JSON":"https://qlf-www-lfp-fr.aw.atos.net/ws/matches.json","CLASSEMENT_JSON":"https://qlf-www-lfp-fr.aw.atos.net/ws/classements.json","API_KEY":"AIzaSyBDB7tizfKHj52jIeoJssDGLsFFuT0ZNNk"}) && Object({"NODE_ENV":"production","MATCHS_JSON":"https://qlf-www-lfp-fr.aw.atos.net/ws/matches.json","CLASSEMENT_JSON":"https://qlf-www-lfp-fr.aw.atos.net/ws/classements.json","API_KEY":"AIzaSyBDB7tizfKHj52jIeoJssDGLsFFuT0ZNNk"}).VUE_ENV === 'server')
+        (Object({"NODE_ENV":"production","MATCHS_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/matches.php","CLASSEMENT_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/rankings.php","API_KEY":"AIzaSyBDB7tizfKHj52jIeoJssDGLsFFuT0ZNNk"}) && Object({"NODE_ENV":"production","MATCHS_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/matches.php","CLASSEMENT_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/rankings.php","API_KEY":"AIzaSyBDB7tizfKHj52jIeoJssDGLsFFuT0ZNNk"}).VUE_ENV === 'server')
       )
     ) {
       return
@@ -67607,4 +67607,4 @@ function applyToTag (styleElement, obj) {
 
 /***/ })
 ]);
-//# sourceMappingURL=vendor.d5fff08c7cf373777212.js.map
+//# sourceMappingURL=vendor.06e3949e6805123d72fa.js.map
