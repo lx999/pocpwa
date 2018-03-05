@@ -7,7 +7,7 @@
       "statut": "L",
       "ligue": "1",
       "periode": "2C",
-      "time": "79'",
+      "time": "80'",
       "recevant": {
       "id": "294",
       "club": "FC Metz",
@@ -103,32 +103,6 @@
       }
     }
   ],
-  "notifications": [
-    {
-      "id": "1",
-      "type": "BUT",
-      "title": "but",
-      "message": "cool!"
-    },
-    {
-      "id": "2",
-      "type": "ROUGE",
-      "title": "ROUGE", 
-      "message": "pppp"
-    },
-    {
-      "id": "3",
-      "type": "JAUNE",
-      "title": "JAUNE", 
-      "message": "pppp"
-    },
-    {
-      "id": "3",
-      "type": "ROUGE",
-      "title": "ROUGE", 
-      "message": "222"
-    }
-  ],
   "events": [
     {
         "id": "455892", 
@@ -140,60 +114,6 @@
         "id": "455895", 
         "type": "CJn", 
         "joueur": "Matthieu DOSSEVI", 
-        "club": "FC Metz"
-    }, 
-    {
-        "id": "455887", 
-        "type": "CJn", 
-        "joueur": "Jordan IKOKO", 
-        "club": "EA Guingamp"
-    }, 
-    {
-        "id": "455885", 
-        "type": "CJn", 
-        "joueur": "Yannis SALIBUR", 
-        "club": "EA Guingamp"
-    }, 
-    {
-        "id": "455873", 
-        "type": "CJn", 
-        "joueur": "Vahid SELIMOVIC", 
-        "club": "FC Metz"
-    }, 
-    {
-        "id": "455858", 
-        "type": "But", 
-        "joueur": "Nolan ROUX", 
-        "club": "FC Metz"
-    }, 
-    {
-        "id": "455854", 
-        "type": "CJn", 
-        "joueur": "Georges MANDJECK", 
-        "club": "FC Metz"
-    }, 
-    {
-        "id": "455848", 
-        "type": "CJn", 
-        "joueur": "Yeni NGBAKOTO", 
-        "club": "EA Guingamp"
-    }, 
-    {
-        "id": "455846", 
-        "type": "But", 
-        "joueur": "Lucas DEAUX", 
-        "club": "EA Guingamp"
-    }, 
-    {
-        "id": "455845", 
-        "type": "CJn", 
-        "joueur": "Ivan BALLIU", 
-        "club": "FC Metz"
-    }, 
-    {
-        "id": "455841", 
-        "type": "Pen", 
-        "joueur": "Florent MOLLET", 
         "club": "FC Metz"
     }
   ]
