@@ -46758,7 +46758,7 @@ var index = {
       (
         process.server ||
         process.SERVER_BUILD ||
-        (Object({"NODE_ENV":"production","MATCHS_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/matches.php","CLASSEMENT_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/rankings.php","API_KEY":"AIzaSyBDB7tizfKHj52jIeoJssDGLsFFuT0ZNNk"}) && Object({"NODE_ENV":"production","MATCHS_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/matches.php","CLASSEMENT_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/rankings.php","API_KEY":"AIzaSyBDB7tizfKHj52jIeoJssDGLsFFuT0ZNNk"}).VUE_ENV === 'server')
+        (Object({"NODE_ENV":"production","MATCHS_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/matches.php","CLASSEMENT_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/rankings.php","API_KEY":"AAAAK1R1Ucw:APA91bHUkZMu5vZfljcc4v1CjH5sj2ywVw5kdvF1OjhwqtZvEtktYe0bjW_yi7JBKo2BJZ4LyKqhZmjIWZ5Jw24KLJ9sp3jxvDw6JRTiDG48TG0k_xN3f9mr90fHpt2N0KzsaTCX52Lv"}) && Object({"NODE_ENV":"production","MATCHS_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/matches.php","CLASSEMENT_JSON":"https://qlf-www-lfp-fr.aw.atos.net/pwa/data/rankings.php","API_KEY":"AAAAK1R1Ucw:APA91bHUkZMu5vZfljcc4v1CjH5sj2ywVw5kdvF1OjhwqtZvEtktYe0bjW_yi7JBKo2BJZ4LyKqhZmjIWZ5Jw24KLJ9sp3jxvDw6JRTiDG48TG0k_xN3f9mr90fHpt2N0KzsaTCX52Lv"}).VUE_ENV === 'server')
       )
     ) {
       return
@@ -70528,4 +70528,4 @@ function applyToTag (styleElement, obj) {
 
 /***/ })
 ]);
-//# sourceMappingURL=vendor.7b122b1d24868e4a82ae.js.map
+//# sourceMappingURL=vendor.6857c77baf86620aa5d1.js.map
