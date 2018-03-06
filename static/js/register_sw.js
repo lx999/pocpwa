@@ -1,6 +1,7 @@
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('static/js/sw.js')
     .then(function(registration) {
+      console.log(registration.pushManager.getSubscription())
       if(!registration.pushManager.getSubscription()) {
         registration.pushManager.subscribe({userVisibleOnly: true}).then(function(sub) {
         var endpointSections = sub.endpoint.split('/');
