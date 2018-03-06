@@ -10,6 +10,7 @@ self.addEventListener('activate', function(event) {
 });
 self.addEventListener('push', event => {
   console.log('[Service Worker] Push Received.');
+  console.log(event);
   let title = 'Server Push';
   let options = {
     body: 'push TEST',
@@ -35,9 +36,11 @@ self.addEventListener('push', event => {
 // });
 
 self.addEventListener('notificationclick', event => {
+  console.log(notification.data);
   const notification = event.notification;
   const action = event.action;
   const link = notification.data.link;
+
   if (action !== 'close') {
     if (link) {
       clients.openWindow(link);

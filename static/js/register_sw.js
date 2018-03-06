@@ -2,7 +2,7 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('static/js/sw.js')
     .then(function(registration) {
       console.log(registration.pushManager.getSubscription())
-      if(!registration.pushManager.getSubscription()) {
+      // if(!registration.pushManager.getSubscription()) {
         registration.pushManager.subscribe({userVisibleOnly: true}).then(function(sub) {
         var endpointSections = sub.endpoint.split('/');
         var subscriptionId = endpointSections[endpointSections.length - 1];
@@ -10,7 +10,7 @@ if ('serviceWorker' in navigator) {
         firebase.database().ref('token/' + newKey).set({subscriptionId: subscriptionId});
         console.log('endpoint:', subscriptionId);
       });
-      }
+      // }
     });
   navigator.serviceWorker.ready.then(function(registration) {
      console.log('Service Worker Ready');
