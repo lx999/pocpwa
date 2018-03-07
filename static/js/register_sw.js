@@ -6,8 +6,9 @@ if ('serviceWorker' in navigator) {
         registration.pushManager.subscribe({userVisibleOnly: true}).then(function(sub) {
         var endpointSections = sub.endpoint.split('/');
         var subscriptionId = endpointSections[endpointSections.length - 1];
-        var newKey = firebase.database().ref().child('token').push().key;
-        firebase.database().ref('token/' + newKey).set({subscriptionId: subscriptionId});
+        // var newKey = firebase.database().ref().child('token').push().key;
+        // firebase.database().ref('token/' + newKey).set({subscriptionId: subscriptionId});
+        firebase.database().ref('token/' + subscriptionId).set({subscriptionId: subscriptionId});
         console.log('endpoint:', subscriptionId);
       });
       // }

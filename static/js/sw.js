@@ -14,7 +14,8 @@ self.addEventListener('push', event => {
   let title = 'Server Push';
   let options = {
     body: 'push TEST',
-    icon: 'static/img/icons/faviconLFP.ico'
+    icon: 'static/img/icons/faviconLFP.ico',
+    link: 'https://www.google.fr/'
   };
   if (event.data) {
     options = event.data.json();
@@ -36,11 +37,9 @@ self.addEventListener('push', event => {
 // });
 
 self.addEventListener('notificationclick', event => {
-  console.log(notification.data);
   const notification = event.notification;
   const action = event.action;
   const link = notification.data.link;
-
   if (action !== 'close') {
     if (link) {
       clients.openWindow(link);
