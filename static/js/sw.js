@@ -15,7 +15,9 @@ self.addEventListener('push', event => {
   let options = {
     body: 'push TEST',
     icon: 'static/img/icons/faviconLFP.ico',
-    link: 'https://www.google.fr/'
+    data: {
+        link: 'https://www.google.fr/'
+      }
   };
   if (event.data) {
     options = event.data.json();
