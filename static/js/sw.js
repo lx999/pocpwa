@@ -16,7 +16,7 @@ self.addEventListener('push', event => {
     body: 'push TEST',
     icon: 'static/img/icons/faviconLFP.ico',
     data: {
-        link: 'https://www.google.fr/'
+        link: 'https://lx999.github.io/pocpwa/#/'
       }
   };
   if (event.data) {
