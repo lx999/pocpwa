@@ -26,7 +26,7 @@
         registration.pushManager.getSubscription()
         .then(function (subscription) {
           //If already access granted, enable push button status
-          console.log('qsdffsqdf')
+          console.log(subscription)
           if (subscription) {
             changePushStatus(true);
           }
@@ -103,6 +103,7 @@
   function changePushStatus(status) {
     fabPushImgElement.dataset.checked = status;
     fabPushImgElement.checked = status;
+    console.log('status:' + status);
     if (status) {
       fabPushElement.classList.add('active');
       fabPushImgElement.src = 'static/img/clubs/ac-ajaccio.svg';
