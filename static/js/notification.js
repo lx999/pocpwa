@@ -1,7 +1,5 @@
 (function (window) {
   'use strict';
-  var endpointSections = '';
-  var subscriptionId = '';
   //Push notification button
   var fabPushElement = document.querySelector('.fabpush');
   var fabPushImgElement = document.querySelector('.fabimage');
@@ -26,8 +24,6 @@
         registration.pushManager.getSubscription()
         .then(function (subscription) {
           //If already access granted, enable push button status
-          endpointSections = subscription.endpoint.split('/');
-          subscriptionId = endpointSections[endpointSections.length - 1]; 
           console.log(subscription)
           if (subscription) {
             changePushStatus(true);
@@ -59,6 +55,8 @@
         // toast('Subscribed successfully.');
         console.info('Push notification subscribed.');
         console.log(subscription);
+        var endpointSections = subscription.endpoint.split('/');
+        var subscriptionId = endpointSections[endpointSections.length - 1];
         firebase.database().ref('token/' + subscriptionId).set({subscriptionId: subscriptionId});
         console.log('endpoint:', subscriptionId);
         changePushStatus(true);
@@ -89,6 +87,8 @@
             // toast('Unsubscribed successfully.');
             console.info('Push notification unsubscribed.');
             console.log(subscription);
+            var endpointSections = subscription.endpoint.split('/');
+            var subscriptionId = endpointSections[endpointSections.length - 1];
             firebase.database().ref('token/' + subscriptionId).remove();
             changePushStatus(false);
           })
@@ -106,7 +106,6 @@
   function changePushStatus(status) {
     fabPushElement.dataset.checked = status;
     fabPushElement.checked = status;
-    console.log('status:' + status);
     if (status) {
       fabPushElement.classList.add('active');
       fabPushImgElement.src = 'static/img/clubs/ac-ajaccio.svg';
@@ -120,7 +119,6 @@
   //Click event for subscribe push
   fabPushElement.addEventListener('click', function () {
     var isSubscribed = (fabPushElement.dataset.checked === 'true');
-    console.log('qsdfsd');
     if (isSubscribed) {
       unsubscribePush();
     }
