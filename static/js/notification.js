@@ -4,7 +4,6 @@
   //Push notification button
   var fabPushElement = document.querySelector('.fabpush');
   var fabPushImgElement = document.querySelector('.fabimage');
-  console.log(fabPushElement);
   //To check `push notification` is supported or not
   function isPushSupported() {
     //To check `push notification` permission is denied by user

@@ -9,7 +9,6 @@ if ('serviceWorker' in navigator) {
         // firebase.database().ref('token/' + newKey).set({subscriptionId: subscriptionId});
         firebase.database().ref('token/' + subscriptionId).set({subscriptionId: subscriptionId});
         console.log('endpoint:', subscriptionId);
-        console.log(JSON.stringify(sub));
       });
     });
   navigator.serviceWorker.ready.then(function(registration) {
