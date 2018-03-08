@@ -1,5 +1,26 @@
 (function (window) {
   'use strict';
+  var throttle = function (fn, delay, atleast) {
+    var timer = null;
+    var previous = null;
+ 
+    return function () {
+        var now = +new Date();
+ 
+        if ( !previous ) previous = now;
+ 
+        if ( now - previous > atleast ) {
+            fn();
+            // 重置上一次开始时间为本次结束时间
+            previous = now;
+        } else {
+            clearTimeout(timer);
+            timer = setTimeout(function() {
+                fn();
+            }, delay);
+        }
+    }
+  };
   //Push notification button
   var fabPushElement = document.querySelector('.fabpush');
   var fabPushImgElement = document.querySelector('.fabimage');
@@ -117,7 +138,7 @@
   }
 
   //Click event for subscribe push
-  fabPushElement.addEventListener('click', function () {
+  fabPushElement.addEventListener('click', throttle(function () {
     var isSubscribed = (fabPushElement.dataset.checked === 'true');
     if (isSubscribed) {
       unsubscribePush();
@@ -125,7 +146,7 @@
     else {
       subscribePush();
     }
-  });
+  }, 1000));
 
   isPushSupported(); //Check for push notification support
 })(window);
