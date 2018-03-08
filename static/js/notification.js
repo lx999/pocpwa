@@ -54,7 +54,7 @@
         userVisibleOnly: true //Always show notification when received
       })
       .then(function (subscription) {
-        toast('Subscribed successfully.');
+        // toast('Subscribed successfully.');
         console.info('Push notification subscribed.');
         console.log(subscription);
         //saveSubscriptionID(subscription);
@@ -83,7 +83,7 @@
         //Unsubscribe `push notification`
         subscription.unsubscribe()
           .then(function () {
-            toast('Unsubscribed successfully.');
+            // toast('Unsubscribed successfully.');
             console.info('Push notification unsubscribed.');
             console.log(subscription);
             //deleteSubscriptionID(subscription);
@@ -101,22 +101,22 @@
 
   //To change status
   function changePushStatus(status) {
-    fabPushImgElement.dataset.checked = status;
-    fabPushImgElement.checked = status;
+    fabPushElement.dataset.checked = status;
+    fabPushElement.checked = status;
     console.log('status:' + status);
     if (status) {
       fabPushElement.classList.add('active');
       fabPushImgElement.src = 'static/img/clubs/ac-ajaccio.svg';
     }
     else {
-     fabPushImgElement.classList.remove('active');
+     fabPushElement.classList.remove('active');
      fabPushImgElement.src = 'static/img/clubs/aj-auxerre.svg';
     }
   }
 
   //Click event for subscribe push
-  fabPushImgElement.addEventListener('click', function () {
-    var isSubscribed = (fabPushImgElement.dataset.checked === 'true');
+  fabPushElement.addEventListener('click', function () {
+    var isSubscribed = (fabPushElement.dataset.checked === 'true');
     console.log('qsdfsd');
     if (isSubscribed) {
       unsubscribePush();
