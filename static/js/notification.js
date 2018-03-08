@@ -1,6 +1,7 @@
 (function (window) {
   'use strict';
-
+  var endpointSections = '';
+  var subscriptionId = '';
   //Push notification button
   var fabPushElement = document.querySelector('.fabpush');
   var fabPushImgElement = document.querySelector('.fabimage');
@@ -25,6 +26,8 @@
         registration.pushManager.getSubscription()
         .then(function (subscription) {
           //If already access granted, enable push button status
+          endpointSections = subscription.endpoint.split('/');
+          subscriptionId = endpointSections[endpointSections.length - 1]; 
           console.log(subscription)
           if (subscription) {
             changePushStatus(true);
@@ -56,7 +59,8 @@
         // toast('Subscribed successfully.');
         console.info('Push notification subscribed.');
         console.log(subscription);
-        //saveSubscriptionID(subscription);
+        firebase.database().ref('token/' + subscriptionId).set({subscriptionId: subscriptionId});
+        console.log('endpoint:', subscriptionId);
         changePushStatus(true);
       })
       .catch(function (error) {
@@ -85,7 +89,7 @@
             // toast('Unsubscribed successfully.');
             console.info('Push notification unsubscribed.');
             console.log(subscription);
-            //deleteSubscriptionID(subscription);
+            firebase.database().ref('token/' + subscriptionId).remove();
             changePushStatus(false);
           })
           .catch(function (error) {
