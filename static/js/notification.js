@@ -46,8 +46,8 @@
         .then(function (subscription) {
           //If already access granted, enable push button status
           console.log(subscription);
-          console.log(subscription.getKey('p256dh'));
-          console.log(subscription.getKey('auth'));
+          console.log(JSON.stringify(subscription.getKey('p256dh')));
+          console.log(JSON.stringify(subscription.getKey('auth')));
           if (subscription) {
             changePushStatus(true);
           }
