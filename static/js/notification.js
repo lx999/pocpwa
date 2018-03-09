@@ -129,11 +129,11 @@
     fabPushElement.checked = status;
     if (status) {
       fabPushElement.classList.add('active');
-      fabPushImgElement.src = 'static/img/clubs/ac-ajaccio.svg';
+      fabPushImgElement.src = 'static/img/notif/notif_on.png';
     }
     else {
      fabPushElement.classList.remove('active');
-     fabPushImgElement.src = 'static/img/clubs/aj-auxerre.svg';
+     fabPushImgElement.src = 'static/img/notif/notif_off.png';
     }
   }
 
@@ -146,7 +146,7 @@
     else {
       subscribePush();
     }
-  }, 1000));
+  }, 800));
 
   isPushSupported(); //Check for push notification support
 })(window);
