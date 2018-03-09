@@ -45,9 +45,7 @@
         registration.pushManager.getSubscription()
         .then(function (subscription) {
           //If already access granted, enable push button status
-          console.log(subscription);
-          console.log(JSON.stringify(subscription.getKey('p256dh')));
-          console.log(JSON.stringify(subscription.getKey('auth')));
+          console.log(JSON.stringify(subscription));
           if (subscription) {
             changePushStatus(true);
           }
