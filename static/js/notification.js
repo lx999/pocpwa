@@ -129,11 +129,11 @@
     fabPushElement.checked = status;
     if (status) {
       fabPushElement.classList.add('active');
-      fabPushImgElement.src = 'static/img/notif/notif_on.png';
+      fabPushImgElement.src = 'static/img/clubs/ac-ajaccio.svg';
     }
     else {
      fabPushElement.classList.remove('active');
-     fabPushImgElement.src = 'static/img/notif/notif_off.png';
+     fabPushImgElement.src = 'static/img/clubs/aj-auxerre.svg';
     }
   }
 
@@ -141,11 +141,9 @@
   fabPushElement.addEventListener('click', throttle(function () {
     var isSubscribed = (fabPushElement.dataset.checked === 'true');
     if (isSubscribed) {
-      console.log('blabla');
       unsubscribePush();
     }
     else {
-      console.log('bla');
       subscribePush();
     }
   }, 800));
