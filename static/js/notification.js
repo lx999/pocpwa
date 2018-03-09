@@ -141,12 +141,14 @@
   fabPushElement.addEventListener('click', throttle(function () {
     var isSubscribed = (fabPushElement.dataset.checked === 'true');
     if (isSubscribed) {
+      console.log('blabla');
       unsubscribePush();
     }
     else {
+      console.log('bla');
       subscribePush();
     }
-  }, 800));
+  }, 1000));
 
   isPushSupported(); //Check for push notification support
 })(window);
