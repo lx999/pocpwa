@@ -148,7 +148,7 @@
       console.log('bla');
       subscribePush();
     }
-  }, 1000));
+  }, 800));
 
   isPushSupported(); //Check for push notification support
 })(window);
