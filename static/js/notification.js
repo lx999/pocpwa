@@ -62,6 +62,10 @@
   // Ask User if he/she wants to subscribe to push notifications and then
   // ..subscribe and send push notification
   function subscribePush() {
+    if (Notification.permission === 'denied') {
+      alert('User has blocked push notification.');
+      return;
+    };
     navigator.serviceWorker.ready.then(function(registration) {
       if (!registration.pushManager) {
         alert('Your browser doesn\'t support push notification.');
