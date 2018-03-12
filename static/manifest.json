@@ -16,7 +16,7 @@
       "src": "/pocpwa/static/img/icons/android-chrome-512x512_LFP.png",
       "sizes": "512x512",
       "type": "image/png"
-    },
+    }
   ],
   "start_url": "/pocpwa/index.html",
   "display": "standalone",
