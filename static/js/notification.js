@@ -146,7 +146,7 @@
     else {
       subscribePush();
     }
-  }, 800));
+  }, 600));
 
   isPushSupported(); //Check for push notification support
 })(window);
