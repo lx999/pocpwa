@@ -12,6 +12,7 @@
 self.addEventListener('push', function(event) {
   console.log('[Service Worker] Push Received.');
   console.log(event);
+  console.log(event.data.json());
   let title = 'Server Push';
   let options = {
     body: 'push TEST',
