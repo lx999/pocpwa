@@ -65,10 +65,11 @@
 // });   
 self.addEventListener('push', function(event) {
 
-  var apiPath = '<apiPath>';
+  var apiPath = './getPayload?endpoint=';
   event.waitUntil(registration.pushManager.getSubscription().then(function (subscription){
-
-      return fetch(apiPath).then(function(response){
+      var endpointSections = subscription.endpoint.split('/');
+      var subscriptionId = endpointSections[endpointSections.length - 1];
+      return fetch(apiPath + subscriptionId).then(function(response){
           if(response.status !== 200){
               throw new Error();
           }
@@ -88,7 +89,7 @@ self.addEventListener('push', function(event) {
               });
           })
       }).catch(function(err){
-
+        console.log('fetch error');
       })
 
   }));
