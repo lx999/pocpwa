@@ -109,7 +109,7 @@ self.addEventListener('push', function(event) {
   event.waitUntil(
     getEndpoint()
     .then(function(endpoint) {
-      return fetch('./getPayload?endpoint=' + endpoint);
+      return fetch('https://lx999.github.io/pocpwa/static/data/notif.json');
     })
     .then(function(response) {
       return response.text();
