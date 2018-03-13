@@ -110,7 +110,7 @@ self.addEventListener('push', function(event) {
     getEndpoint()
     .then(function(endpoint) {
       console.log(endpoint);
-      return fetch('https://fcm.googleapis.com/fcm/send' + endpoint);
+      return fetch(endpoint);
     })
     .then(function(response) {
       return response.text();
