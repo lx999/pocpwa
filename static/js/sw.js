@@ -41,28 +41,28 @@
 //   console.log('notificationclick action is', action);
 // });
 
-// self.addEventListener('push', function(event) {
-//   console.log(event);
-//   var data = {};
-//   if (event.data) {
-//     data = event.data.json();
-//   }
-//   var title = data.title || "Something Has Happened";
-//   var message = data.message || "Here's something you might want to check out.";
-//   var icon = "https://lx999.github.io/pocpwa/static/img/icons/favicon.ico";
+self.addEventListener('push', function(event) {
+  console.log(event);
+  var data = {};
+  if (event.data) {
+    data = event.data.json();
+  }
+  var title = data.title || "Something Has Happened";
+  var message = data.message || "Here's something you might want to check out.";
+  var icon = "https://lx999.github.io/pocpwa/static/img/icons/favicon.ico";
 
-//   var notification = new Notification(title, {
-//     body: message,
-//     tag: 'simple-push-demo-notification',
-//     icon: icon
-//   });
+  var notification = new Notification(title, {
+    body: message,
+    tag: 'simple-push-demo-notification',
+    icon: icon
+  });
 
-//   notification.addEventListener('click', function() {
-//     if (clients.openWindow) {
-//       clients.openWindow('https://lx999.github.io/pocpwa/#/');
-//     }
-//   });
-// });   
+  notification.addEventListener('click', function() {
+    if (clients.openWindow) {
+      clients.openWindow('https://lx999.github.io/pocpwa/#/');
+    }
+  });
+});   
 // self.addEventListener('push', function(event) {
 
 //   var apiPath = './getPayload?endpoint=';
@@ -95,31 +95,37 @@
 //   }));
 //   return;
 // });
-function getEndpoint() {
-  return self.registration.pushManager.getSubscription()
-  .then(function(subscription) {
-    if (subscription) {
-      return subscription.endpoint;
-    }
+// function getEndpoint() {
+//   return self.registration.pushManager.getSubscription()
+//   .then(function(subscription) {
+//     if (subscription) {
+//       return subscription.endpoint;
+//     }
 
-    throw new Error('User not subscribed');
-  });
-};
-self.addEventListener('push', function(event) {
-  event.waitUntil(
-    getEndpoint()
-    .then(function(endpoint) {
-      console.log(endpoint);
-      return fetch(endpoint);
-    })
-    .then(function(response) {
-      return response.text();
-    })
-    .then(function(payload) {
-      console.log(payload);
-      self.registration.showNotification('ServiceWorker Cookbook', {
-        body: payload
-      });
-    })
-  );
-});
+//     throw new Error('User not subscribed');
+//   });
+// };
+// var myHeaders = new Headers();
+// myHeaders.append("Content-Type", "application/json");
+// myHeaders.append("Authorization", "key=AAAAK1R1Ucw:APA91bHUkZMu5vZfljcc4v1CjH5sj2ywVw5kdvF1OjhwqtZvEtktYe0bjW_yi7JBKo2BJZ4LyKqhZmjIWZ5Jw24KLJ9sp3jxvDw6JRTiDG48TG0k_xN3f9mr90fHpt2N0KzsaTCX52Lv");
+// var myInit = { method: 'GET',
+//                headers: myHeaders };
+// self.addEventListener('push', function(event) {
+//   event.waitUntil(
+//     getEndpoint()
+//     .then(function(endpoint) {
+//       console.log(endpoint);
+//       var myRequest = new Request('flowers.jpg', myInit);
+//       return fetch(endpoint);
+//     })
+//     .then(function(response) {
+//       return response.text();
+//     })
+//     .then(function(payload) {
+//       console.log(payload);
+//       self.registration.showNotification('ServiceWorker Cookbook', {
+//         body: payload
+//       });
+//     })
+//   );
+// });
