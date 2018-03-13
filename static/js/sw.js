@@ -41,9 +41,6 @@
 // });
 
 self.addEventListener('push', function(event) {
-  if (!(self.Notification && self.notification.permission === 'granted')) {
-    return;
-  }
   console.log(event);
   var data = {};
   if (event.data) {
