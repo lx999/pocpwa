@@ -22,20 +22,6 @@
     }
   };
 
-  const applicationServerPublicKey = 'BKsb5IumFOgJMBgk15Ce-oU123T5EuPFo3goBbRhwZarYlUfGC-I7JTKSee2TpmjG3HNZQcwirLYz2Fx9b_eZrU';
-  function urlB64ToUint8Array(base64String) {
-    const padding = '='.repeat((4 - base64String.length % 4) % 4);
-    const base64 = (base64String + padding)
-      .replace(/\-/g, '+')
-      .replace(/_/g, '/');
-    const rawData = window.atob(base64);
-    const outputArray = new Uint8Array(rawData.length);
-    for (let i = 0; i < rawData.length; ++i) {
-      outputArray[i] = rawData.charCodeAt(i);
-    }
-    return outputArray;
-  };
-
   //Push notification button
   var fabPushElement = document.querySelector('.fabpush');
   var fabPushImgElement = document.querySelector('.fabimage');
@@ -88,10 +74,8 @@
       }
 
       //To subscribe `push notification` from push manager
-      const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
       registration.pushManager.subscribe({
         userVisibleOnly: true, //Always show notification when received
-        applicationServerKey: applicationServerKey
       })
       .then(function (subscription) {
         console.info('Push notification subscribed.');
@@ -165,7 +149,7 @@
     else {
       subscribePush();
     }
-  }, 600));
+  }, 500));
 
 
   isPushSupported(); //Check for push notification support
