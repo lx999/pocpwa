@@ -77,14 +77,13 @@
         userVisibleOnly: true //Always show notification when received
       })
       .then(function (subscription) {
-        // toast('Subscribed successfully.');
         console.info('Push notification subscribed.');
         console.log(subscription);
+        changePushStatus(true);
         var endpointSections = subscription.endpoint.split('/');
         var subscriptionId = endpointSections[endpointSections.length - 1];
         firebase.database().ref('token/' + subscriptionId).set({subscriptionId: subscriptionId});
         console.log('endpoint:', subscriptionId);
-        changePushStatus(true);
       })
       .catch(function (error) {
         changePushStatus(false);
@@ -109,13 +108,12 @@
         //Unsubscribe `push notification`
         subscription.unsubscribe()
           .then(function () {
-            // toast('Unsubscribed successfully.');
             console.info('Push notification unsubscribed.');
             console.log(subscription);
+            changePushStatus(false);
             var endpointSections = subscription.endpoint.split('/');
             var subscriptionId = endpointSections[endpointSections.length - 1];
             firebase.database().ref('token/' + subscriptionId).remove();
-            changePushStatus(false);
           })
           .catch(function (error) {
             console.error(error);
