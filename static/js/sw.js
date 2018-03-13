@@ -63,35 +63,62 @@
 //     }
 //   });
 // });   
+// self.addEventListener('push', function(event) {
+
+//   var apiPath = './getPayload?endpoint=';
+//   event.waitUntil(registration.pushManager.getSubscription().then(function (subscription){
+//       var endpointSections = subscription.endpoint.split('/');
+//       var subscriptionId = endpointSections[endpointSections.length - 1];
+//       return fetch(apiPath + subscriptionId).then(function(response){
+//           if(response.status !== 200){
+//               throw new Error();
+//           }
+
+//           return response.json().then(function(data){
+//             console.log('data:' + data);
+//               var title = data.title;
+//               var message = data.body;
+//               var icon = data.icon;
+//               var tag = data.tag;
+//               var url = data.url;
+//               return self.registration.showNotification(title,{
+//                  body: message,
+//                  icon: icon,
+//                  tag: tag,
+//                  data: url
+//               });
+//           })
+//       }).catch(function(err){
+//         console.log('fetch error');
+//       })
+
+//   }));
+//   return;
+// });
+function getEndpoint() {
+  return self.registration.pushManager.getSubscription()
+  .then(function(subscription) {
+    if (subscription) {
+      return subscription.endpoint;
+    }
+
+    throw new Error('User not subscribed');
+  });
+};
 self.addEventListener('push', function(event) {
-
-  var apiPath = './getPayload?endpoint=';
-  event.waitUntil(registration.pushManager.getSubscription().then(function (subscription){
-      var endpointSections = subscription.endpoint.split('/');
-      var subscriptionId = endpointSections[endpointSections.length - 1];
-      return fetch(apiPath + subscriptionId).then(function(response){
-          if(response.status !== 200){
-              throw new Error();
-          }
-
-          return response.json().then(function(data){
-            console.log('data:' + data);
-              var title = data.title;
-              var message = data.body;
-              var icon = data.icon;
-              var tag = data.tag;
-              var url = data.url;
-              return self.registration.showNotification(title,{
-                 body: message,
-                 icon: icon,
-                 tag: tag,
-                 data: url
-              });
-          })
-      }).catch(function(err){
-        console.log('fetch error');
-      })
-
-  }));
-  return;
+  event.waitUntil(
+    getEndpoint()
+    .then(function(endpoint) {
+      return fetch('./getPayload?endpoint=' + endpoint);
+    })
+    .then(function(response) {
+      return response.text();
+    })
+    .then(function(payload) {
+      console.log(payload);
+      self.registration.showNotification('ServiceWorker Cookbook', {
+        body: payload
+      });
+    })
+  );
 });
