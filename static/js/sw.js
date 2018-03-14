@@ -9,36 +9,36 @@
 //   console.log('Activated', event);
 // });
 
-// self.addEventListener('push', function(event) {
-//   console.log('[Service Worker] Push Received.');
-//   console.log(event);
-//   let title = 'Server Push';
-//   let options = {
-//     body: 'push TEST',
-//     icon: 'https://lx999.github.io/pocpwa/static/img/icons/favicon.ico',
-//     data: {
-//         link: 'https://lx999.github.io/pocpwa/#/'
-//       }
-//   };
-//   if (event.data) {
-//     options = event.data.json();
-//     title = options.title;
-//   }
-//   event.waitUntil(self.registration.showNotification(title, options));
-// });
+self.addEventListener('push', function(event) {
+  console.log('[Service Worker] Push Received.');
+  console.log(event);
+  let title = 'Server Push';
+  let options = {
+    body: 'push TEST',
+    icon: 'https://lx999.github.io/pocpwa/static/img/icons/favicon.ico',
+    data: {
+        link: 'https://lx999.github.io/pocpwa/#/'
+      }
+  };
+  if (event.data) {
+    options = event.data.json();
+    title = options.title;
+  }
+  event.waitUntil(self.registration.showNotification(title, options));
+});
 
-// self.addEventListener('notificationclick', event => {
-//   const notification = event.notification;
-//   const action = event.action;
-//   const link = notification.data.link;
-//   if (action !== 'close') {
-//     if (link) {
-//       clients.openWindow(link);
-//     }
-//   }
-//   notification.close();
-//   console.log('notificationclick action is', action);
-// });
+self.addEventListener('notificationclick', event => {
+  const notification = event.notification;
+  const action = event.action;
+  const link = notification.data.link;
+  if (action !== 'close') {
+    if (link) {
+      clients.openWindow(link);
+    }
+  }
+  notification.close();
+  console.log('notificationclick action is', action);
+});
 
 // self.addEventListener('push', function(event) {
 //   console.log(event);
@@ -128,65 +128,65 @@
 //     })
 //   );
 // });
-var endp = '';
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.getSubscription().then(function(subscription) {
-    endp = subscription.endpoint;
-  })
-});
+// var endp = '';
+// navigator.serviceWorker.ready.then(function(reg) {
+//   reg.pushManager.getSubscription().then(function(subscription) {
+//     endp = subscription.endpoint;
+//   })
+// });
 
-self.addEventListener('push', function(event) {  
-  event.waitUntil(  
-    fetch(endp).then(function(response) {  
-      if (response.status !== 200) {   
-        console.log('Looks like there was a problem. Status Code: ' + response.status);  
-        throw new Error();  
-      }
+// self.addEventListener('push', function(event) {  
+//   event.waitUntil(  
+//     fetch(endp).then(function(response) {  
+//       if (response.status !== 200) {   
+//         console.log('Looks like there was a problem. Status Code: ' + response.status);  
+//         throw new Error();  
+//       }
 
-      // Examine the text in the response  
-      return response.json().then(function(data) {
-        console.log('data' + data);  
-        if (data.error || !data.notification) {  
-          console.error('The API returned an error.', data.error);  
-          throw new Error();  
-        }
+//       // Examine the text in the response  
+//       return response.json().then(function(data) {
+//         console.log('data' + data);  
+//         if (data.error || !data.notification) {  
+//           console.error('The API returned an error.', data.error);  
+//           throw new Error();  
+//         }
 
-        var title = data.notification.title;  
-        var message = data.notification.message;  
-        var icon = data.notification.icon;  
-        var notificationTag = data.notification.tag;
+//         var title = data.notification.title;  
+//         var message = data.notification.message;  
+//         var icon = data.notification.icon;  
+//         var notificationTag = data.notification.tag;
 
-        return self.registration.showNotification(title, {  
-          body: message,  
-          icon: icon,  
-          tag: notificationTag  
-        });  
-      });  
-    }).catch(function(err) {  
-      console.error('Unable to retrieve data', err);
+//         return self.registration.showNotification(title, {  
+//           body: message,  
+//           icon: icon,  
+//           tag: notificationTag  
+//         });  
+//       });  
+//     }).catch(function(err) {  
+//       console.error('Unable to retrieve data', err);
 
-      var title = 'An error occurred';
-      var message = 'We were unable to get the information for this push message';  
-      var icon = URL_TO_DEFAULT_ICON;  
-      var notificationTag = 'notification-error';  
-      return self.registration.showNotification(title, {  
-          body: message,  
-          icon: icon,  
-          tag: notificationTag  
-        });  
-    })  
-  );  
-});
+//       var title = 'An error occurred';
+//       var message = 'We were unable to get the information for this push message';  
+//       var icon = URL_TO_DEFAULT_ICON;  
+//       var notificationTag = 'notification-error';  
+//       return self.registration.showNotification(title, {  
+//           body: message,  
+//           icon: icon,  
+//           tag: notificationTag  
+//         });  
+//     })  
+//   );  
+// });
 
-self.addEventListener('notificationclick', event => {
-  const notification = event.notification;
-  const action = event.action;
-  const link = notification.data.link;
-  if (action !== 'close') {
-    if (link) {
-      clients.openWindow(link);
-    }
-  }
-  notification.close();
-  console.log('notificationclick action is', action);
-});
+// self.addEventListener('notificationclick', event => {
+//   const notification = event.notification;
+//   const action = event.action;
+//   const link = notification.data.link;
+//   if (action !== 'close') {
+//     if (link) {
+//       clients.openWindow(link);
+//     }
+//   }
+//   notification.close();
+//   console.log('notificationclick action is', action);
+// });
