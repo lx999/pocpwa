@@ -7,7 +7,7 @@ var config = {
   databaseURL: "https://lfp-poc.firebaseio.com",
   projectId: "lfp-poc",
   storageBucket: "lfp-poc.appspot.com",
-  messagingSenderId: "103953800507"
+  messagingSenderId: "186100568524"
 };
 firebase.initializeApp(config);
 const messaging = firebase.messaging();
