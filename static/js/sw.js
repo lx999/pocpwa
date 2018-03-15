@@ -1,67 +1,57 @@
-// console.log('Started', self);
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
 
-// self.addEventListener('install', function(event) {
-//   self.skipWaiting();
-//   console.log('Installed', event);
-// });
+var config = {
+  apiKey: "AAAAK1R1Ucw:APA91bHUkZMu5vZfljcc4v1CjH5sj2ywVw5kdvF1OjhwqtZvEtktYe0bjW_yi7JBKo2BJZ4LyKqhZmjIWZ5Jw24KLJ9sp3jxvDw6JRTiDG48TG0k_xN3f9mr90fHpt2N0KzsaTCX52Lv",
+  authDomain: "lfp-poc.firebaseapp.com",
+  databaseURL: "https://lfp-poc.firebaseio.com",
+  projectId: "lfp-poc",
+  storageBucket: "lfp-poc.appspot.com",
+  messagingSenderId: "186100568524"
+};
+firebase.initializeApp(config);
+const messaging = firebase.messaging();
 
-// self.addEventListener('activate', function(event) {
-//   console.log('Activated', event);
-// });
-
-self.addEventListener('push', function(event) {
-  console.log('[Service Worker] Push Received.');
-  console.log(event);
-  let title = 'Server Push';
-  let options = {
-    body: 'push TEST',
-    icon: 'https://lx999.github.io/pocpwa/static/img/icons/favicon.ico',
-    data: {
-        link: 'https://lx999.github.io/pocpwa/#/'
-      }
+messaging.setBackgroundMessageHandler(function(payload) {
+  const title = 'Hello World';
+  const options = {
+    body: payload.data.status;
   };
-  if (event.data) {
-    options = event.data.json();
-    title = options.title;
-  }
-  event.waitUntil(self.registration.showNotification(title, options));
-});
-
-self.addEventListener('notificationclick', event => {
-  const notification = event.notification;
-  const action = event.action;
-  const link = notification.data.link;
-  if (action !== 'close') {
-    if (link) {
-      clients.openWindow(link);
-    }
-  }
-  notification.close();
-  console.log('notificationclick action is', action);
-});
+  return self.registration.showNotification(title, options);
+})
 
 // self.addEventListener('push', function(event) {
+//   console.log('[Service Worker] Push Received.');
 //   console.log(event);
-//   var data = {};
+//   let title = 'Server Push';
+//   let options = {
+//     body: 'push TEST',
+//     icon: 'https://lx999.github.io/pocpwa/static/img/icons/favicon.ico',
+//     data: {
+//         link: 'https://lx999.github.io/pocpwa/#/'
+//       }
+//   };
 //   if (event.data) {
-//     data = event.data.json();
+//     options = event.data.json();
+//     title = options.title;
 //   }
-//   var title = data.title || "Something Has Happened";
-//   var message = data.message || "Here's something you might want to check out.";
-//   var icon = "https://lx999.github.io/pocpwa/static/img/icons/favicon.ico";
+//   event.waitUntil(self.registration.showNotification(title, options));
+// });
 
-//   var notification = new Notification(title, {
-//     body: message,
-//     tag: 'simple-push-demo-notification',
-//     icon: icon
-//   });
-
-//   notification.addEventListener('click', function() {
-//     if (clients.openWindow) {
-//       clients.openWindow('https://lx999.github.io/pocpwa/#/');
+// self.addEventListener('notificationclick', event => {
+//   const notification = event.notification;
+//   const action = event.action;
+//   const link = notification.data.link;
+//   if (action !== 'close') {
+//     if (link) {
+//       clients.openWindow(link);
 //     }
-//   });
-// });   
+//   }
+//   notification.close();
+//   console.log('notificationclick action is', action);
+// });
+
+  
 // self.addEventListener('push', function(event) {
 
 //   var apiPath = './getPayload?endpoint=';
@@ -178,15 +168,3 @@ self.addEventListener('notificationclick', event => {
 //   );  
 // });
 
-// self.addEventListener('notificationclick', event => {
-//   const notification = event.notification;
-//   const action = event.action;
-//   const link = notification.data.link;
-//   if (action !== 'close') {
-//     if (link) {
-//       clients.openWindow(link);
-//     }
-//   }
-//   notification.close();
-//   console.log('notificationclick action is', action);
-// });
