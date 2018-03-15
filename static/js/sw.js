@@ -11,7 +11,18 @@ var config = {
 };
 firebase.initializeApp(config);
 const messaging = firebase.messaging();
-
+messaging.onMessage(function(payload) {
+  console.log("Message received. ", payload);
+  const options = {
+    title: payload.data.title ? payload.data.title:'LFP',
+    body: payload.data.status,
+    icon: 'https://lx999.github.io/pocpwa/static/img/icons/favicon.ico',
+    data: {
+      link: 'https://lx999.github.io/pocpwa/#/'
+    }
+  };
+  return self.registration.showNotification(title, options);
+});
 messaging.setBackgroundMessageHandler(function(payload) {
   const options = {
     title: payload.data.title ? payload.data.title:'LFP',
