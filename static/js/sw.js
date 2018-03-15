@@ -13,7 +13,7 @@ firebase.initializeApp(config);
 const messaging = firebase.messaging();
 
 messaging.setBackgroundMessageHandler(function(payload) {
-  title: payload.data.title ? payload.data.title:'LFP';
+  var title = payload.data.title ? payload.data.title:'LFP';
   const options = {
     body: payload.data.status,
     icon: 'https://lx999.github.io/pocpwa/static/img/icons/favicon.ico',
