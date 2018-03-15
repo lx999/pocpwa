@@ -11,18 +11,7 @@ var config = {
 };
 firebase.initializeApp(config);
 const messaging = firebase.messaging();
-messaging.onMessage(function(payload) {
-  console.log("Message received. ", payload);
-  const options = {
-    title: payload.data.title ? payload.data.title:'LFP',
-    body: payload.data.status,
-    icon: 'https://lx999.github.io/pocpwa/static/img/icons/favicon.ico',
-    data: {
-      link: 'https://lx999.github.io/pocpwa/#/'
-    }
-  };
-  return self.registration.showNotification(title, options);
-});
+
 messaging.setBackgroundMessageHandler(function(payload) {
   const options = {
     title: payload.data.title ? payload.data.title:'LFP',
@@ -53,18 +42,18 @@ messaging.setBackgroundMessageHandler(function(payload) {
 //   event.waitUntil(self.registration.showNotification(title, options));
 // });
 
-// self.addEventListener('notificationclick', event => {
-//   const notification = event.notification;
-//   const action = event.action;
-//   const link = notification.data.link;
-//   if (action !== 'close') {
-//     if (link) {
-//       clients.openWindow(link);
-//     }
-//   }
-//   notification.close();
-//   console.log('notificationclick action is', action);
-// });
+self.addEventListener('notificationclick', event => {
+  const notification = event.notification;
+  const action = event.action;
+  const link = notification.data.link;
+  if (action !== 'close') {
+    if (link) {
+      clients.openWindow(link);
+    }
+  }
+  notification.close();
+  console.log('notificationclick action is', action);
+});
 
   
 // self.addEventListener('push', function(event) {
