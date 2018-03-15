@@ -13,9 +13,13 @@ firebase.initializeApp(config);
 const messaging = firebase.messaging();
 
 messaging.setBackgroundMessageHandler(function(payload) {
-  const title = 'Hello World';
   const options = {
-    body: payload.data.status
+    title: payload.data.title ? payload.data.title:'LFP',
+    body: payload.data.status,
+    icon: 'https://lx999.github.io/pocpwa/static/img/icons/favicon.ico',
+    data: {
+      link: 'https://lx999.github.io/pocpwa/#/'
+    }
   };
   return self.registration.showNotification(title, options);
 })
